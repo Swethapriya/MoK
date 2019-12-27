@@ -1,0 +1,37 @@
+﻿Bubble sort:
+takes Ο(n^2) time
+In bubble sort you only sort adjacent elements... You keep looping till there is no more swaps, which is when
+array is sorted.
+
+Alternatively you can keep swaping till the element is in the right place - but in that case it's no more bubble sort,
+it's insertion sort - also O(n^2)
+
+Selection sort - O(n^2)
+
+Set MIN to location 0
+Step 2 − Search the minimum element in the list
+Step 3 − Swap with value at location MIN
+Step 4 − Increment MIN to point to next element
+Step 5 − Repeat until list is sorted
+
+Merge sort - O(nlogn)
+
+Shell sort is a highly efficient sorting algorithm and is based on insertion sort algorithm. 
+This algorithm avoids large shifts as in case of insertion sort, 
+if the smaller value is to the far right and has to be moved to the far left.
+
+Initialize the value of h
+Step 2 − Divide the list into smaller sub-list of equal interval h
+Step 3 − Sort these sub-lists using insertion sort
+Step 3 − Repeat until complete list is sorted
+
+Quick sort - O(n2):
+
+Step 1 − Choose the highest index value has pivot
+Step 2 − Take two variables to point left and right of the list excluding pivot
+Step 3 − left points to the low index
+Step 4 − right points to the high
+Step 5 − while value at left is less than pivot move right
+Step 6 − while value at right is greater than pivot move left
+Step 7 − if both step 5 and step 6 does not match swap left and right
+Step 8 − if left ≥ right, the point where they met is new pivot

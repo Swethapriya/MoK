@@ -1,0 +1,15 @@
+time series database - InfluxDB - open source application - written in the Go programming language.
+
+InfluxData, the company behind InfluxDB, provides a platform known as the TICK stack. 
+This is a comprehensive platform to collect, store, analyse and visualise time series data. 
+The TICK stack comprises Telegraf, InfluxDB, Chronograph and Kapacitor.
+
+run influxdb: influxd run --config c:\influxdb-1.0.0-1\influxdb.conf
+run influx client: influx.exe
+UI: localhost:8083
+
+COMMANDS: 
+
+CREATE DATABASE dbname
+show databases
+USE database

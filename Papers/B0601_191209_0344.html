@@ -1,0 +1,178 @@
+<style>
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background-color: #D3D3D3;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+td {
+color: black;
+}
+
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 4px;
+}
+table thead tr th {
+  height: 35px;
+  background: black;
+  aling-text: center !important;
+}
+table tbody tr {
+  height: 35px;
+  aling-text: center !important;
+  font-weight: 900;
+}
+table td, table th {
+  text-align: center;
+}
+table td.l, table th.l {
+  text-align: center;
+}
+table td.c, table th.c {
+  text-align: center;
+}
+table td.r, table th.r {
+  text-align: center;
+}
+
+tbody tr {
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:hover {
+  color: #555555;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+body {
+  font-family: Monospace;
+  }
+
+.menuframe {
+  background-image: linear-gradient(white,lightgrey);
+  overflow: hidden;
+}
+
+.topnav a {
+  float: relative;
+  color: black;
+  text-align: center;
+  padding: 4px 4px;
+  text-decoration: none;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.topnav a:hover {
+  background-color: #B7E9F7;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #A7B2F5;
+  color: white;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  height: 2.5rem;
+}
+
+
+
+</style>
+
+ <body> 
+ <h2><center><strong> HANA WORKLOAD ANALYSIS REPORT </strong></center></h2> 
+ <h3><center><strong> B06 : FROM HOST 01 BETWEEN 2019-09-16_02:30 TO 2019-09-16_03:00 : </strong></center></h3> 
+<hr>
+<div class=menuframe>
+<div class=topnav>
+		<a href="#SRUS"> SERVICE & RESOURCE UTILIZATION : </a>
+		<a href="#LOAD"> LOAD </a>
+		<a href="#MC"> MEMORY COMPONENTS </a>
+		<a href="#IO"> IO STATS </a>
+		<a href="#TDS"> THREAD STATES </a>
+</div>
+<br>
+<div class=topnav>
+		<a href="#JOBS"> JOBS SECTION : </a>
+		<a href="#SP"> SAVEPOINT </a>
+		<a href="#DM"> DELTA MERGE </a>
+		<a href="#BKP"> BACKUP </a>
+		<a href="#EXPIMP"> EXPORT/IMPORT </a>
+		<a href="#LU"> LOADS/UNLOADS </a>
+</div>
+<br>
+<div class=topnav>
+		<a href="#SQL"> TOP 10 SQL : </a>
+		<a href="#THRDSQL"> CPU  </a>
+		<a href="#MEMSQL"> MEMORY  </a>
+		<a href="#THRDSQL"> THREADS  </a>
+		<a href="#EXECSQL"> EXECUTION COUNT </a>
+		<a href="#ETIMESQL"> EXECUTION TIME </a>
+		<a href="#"> LOCK WAIT TIME </a>
+		<a href="#"> RECORDS  </a>
+		<a href="#"> SQL ID/TEXT </a>
+</div>
+<br>
+<div class=topnav>
+                <a href="#"> CONFIGURATION : </a>
+                <a href="#"> PARAMETERS  </a>
+</div>
+<br>
+</div>
+<hr>
+<h3 style=color:#ff6347;><center> DATABASE INFORMATION NOT CAPTURED </center></h3>
+<hr>
+<h3 id=SRUS><center><strong> SERVICE & RESOURCE UTILIZATION SECTION </strong></center></h3> 
+<hr>
+ <br> 
+ <h3 style=color:#ff6347;><center> HOST LOAD NOT AVAILABLE ! PLEASE CHECK STATISTICS SERVER </center></h3><br> 
+ <h3 style=color:#ff6347;><center> HOST LOAD NOT AVAILABLE ! PLEASE CHECK STATISTICS SERVER </center></h3><br> 
+ <h3 style=color:#ff6347;><center> HOST MEMORY COMPONENT NOT AVAILABLE ! PLEASE CHECK STATISTICS SERVER STATUS OR PROVIDE LARGER WINDOW </center></h3><br> 
+<hr>
+<h3 id=JOBS><center><strong> JOBS SECTION </strong></center></h3> 
+<hr>
+ <br> 
+ <br> 
+ <h3 id=SP style=color:#ff6347;><center> SAVEPOINT DETAILS NOT AVAILABLE ! PLEASE CHECK STATISTICS SERVER STATUS OR PROVIDE LARGER WINDOW </center></h3><br> 
+ <br> 
+ <h3 id=DM style=color:#9400D3;><center> NO DELTA MERGE( > 60 Seconds) RECORDED DURING THE PROVIDED TIME FRAME </center></h3><br> 
+ <br> 
+ <h3 id=BKP style=color:#9400D3;><center> NO DATA BACKUP RECORDED DURING THE PROVIDED TIME FRAME </center></h3><br> 
+ <br> 
+ <h3 id=EXPIMP style=color:#9400D3;><center> NO SCHEMA REFRESH RECORDED DURING THE PROVIDED TIME FRAME </center></h3><br> 
+<hr>
+<h3 id=SQL><center><strong> TOP 10 SQL SECTION </strong></center></h3> 
+<hr>
+ <br> 
+ <br> 
+ <h3 id=EXECSQL style=color:#9400D3;><center> NO DATA RECORDED  </center></h3><br> 
+ <br> 
+ <h3 id=THRDSQL style=color:#9400D3;><center> NO DATA RECORDED  </center></h3><br> 
+ <br> 
+ <h3 id=ETIMESQL style=color:#9400D3;><center> NO DATA RECORDED  </center></h3><br> 
+ <br> 
+ <h3 id=MEMSQL style=color:#9400D3;><center> NO DATA RECORDED  </center></h3><br> 
+<br>
+<a href=#top>BACK TO TOP</a>

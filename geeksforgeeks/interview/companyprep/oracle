@@ -1,0 +1,31 @@
+Kadane's Algorithm:
+	Given an array arr of N integers. Find the contiguous sub-array with maximum sum.
+
+	Algorithm:
+		Initialize:
+		max_so_far = 0
+		max_ending_here = 0
+
+		Loop for each element of the array
+		  (a) max_ending_here = max_ending_here + a[i]
+		  (b) if(max_ending_here < 0)
+					max_ending_here = 0
+		  (c) if(max_so_far < max_ending_here)
+					max_so_far = max_ending_here
+		return max_so_far
+
+Sorting Cyclic Linked list in place:
+	find length of cycle using 2 pointers with different speeds:
+		Let the pointers meet and then fix one pointer and let the other pointer meet it again. 
+	find lenght of linked list:
+		Two pointers lenght of cycle apart, one step at a time both pointers till they are equal. 
+		gives the index of starting of cycle. 
+	Sort using bubble sort only till the length
+
+Diameter of Binary Search Tree:
+	The diameter of a tree is the number of nodes on the longest path between two leaves in the tree
+
+	Diameter of a tree can be calculated by only using the height function, 
+	because the diameter of a tree is nothing but maximum value of (left_height + right_height + 1) for each node. 
+	So we need to calculate this value (left_height + right_height + 1) for each node and update the result. 
+	Time complexity – O(n)

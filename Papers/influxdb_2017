@@ -1,0 +1,66 @@
+﻿Time Series is an ordered sequence of values of a variable (e.g.temperature) at equally spaced time intervals
+
+Data Location: If related data is not located together in the physical storage, 
+the data queries can be really slow and even result in timeouts because non-sequential I/O operations are 
+still very slow as compared to the sequential I/O even when using SSD. 
+A TSDB co-locates chucks of data within the same time range on the same physical part of the database cluster 
+and hence enables quick access for faster, more eﬃcient analysis. 
+
+Fast, easy range queries: As a TSDB keeps the co-related data together it ensures that the range queries are fast
+
+ Data compression: As time-series data is mostly recorded per second or even with less granularity, 
+ they usually need a better data compression technique. And as the data grows older granularity becomes less important, 
+ so TSDBs should provide functionality to perform roll-ups in such scenarios for data compaction
+
+ Scalability:  time series databases are designed to take care of scale by introducing functionalities that are only possible 
+ when you treat time as your ﬁrst concern
+
+  Reduced downtime: In real life scenarios there are some situations where availability is critical at all times,
+  the architecture of a database that is built for time series data avoids any downtime for data 
+  even in the event of network partitions or hardware failures.
+  
+InﬂuxDB is an open-source schemaless time series database.
+
+ The time column is included in every InﬂuxDB database and stores discrete timestamps, 
+ which are associated with speciﬁc data.
+
+ Field values are the actual data and are always associated with a timestamp. 
+ Each ﬁeld key-ﬁeld value pair is a ﬁeld set
+ Each tag key-tag value pair constitutes a tag set
+
+ The diﬀerence between tags and ﬁelds is that tags are indexed, 
+ which means than queries on tags are faster compared to queries on simple ﬁelds, which are not indexed.
+ Note that the primary key consists of the timestamp and the tags
+
+ Another important concept is measurement (think of it as an SQL table). 
+ measurement technically explains our ﬁelds’ content
+
+ The default retention policy with inﬁnite duration and no replication is called autogen, 
+ which has an inﬁnite duration and a replication factor on 1
+
+Maybe the most important concept in InﬂuxDB is series, which is a collection of data with common retention policy, 
+measurement and tag set
+series - tagsets
+
+Sharding: Sharding is the horizontal partitioning of data in a database. 
+Each partition is called shard. InﬂuxDB stores data in shard groups, 
+which are organized by retention policy and store data with timestamps that fall within a speciﬁc time interval
+ The duration of the shard group is important for eﬃcient drop operations, where data is dropped per shard, not per data.
+
+InﬂuxDB currently uses its in-house built data structure, the Time Structured Merge Tree (TSM Tree)
+
+ Auto-Expiration: Time series data may become less relevant or even useless depending on the application as time goes by.
+ InﬂuxDB with the use of Retention Policies as discussed in Section 2.1.1 enables automatic expiration of stale data.
+
+Unlimited ﬁelds: The new storage engine of InﬂuxDB, TSM Tree, as discussed in Section 2.1.3, is columnar format, 
+which means that the number of ﬁelds does not aﬀect querying performance in a negative way. 
+As a result the number of ﬁelds in measurement (See Section 2.1.1) do not have any limitations as well.
+
+When not to use InfluxDBs:
+1. InﬂuxDB does not allow joins, so either design your schema such that joins are not needed. If this is not the possibility and joins can not be avoided then using inﬂuxDB is not a good idea.
+2. As inﬂuxDB mostly works with frequent data, you can only group time by 1 week at maximum. If there is a requirement to group by more than a week e.g by a month, it can not be done using inﬂuxDB.
+3. If clustering is required but there is no budget to buy the premium version, InﬂuxDB is not the best option.
+4. InﬂuxDB is not CRUD, so if a lot of updates and deletions are required for some use case, inﬂuxDB is not recommended.
+
+
+

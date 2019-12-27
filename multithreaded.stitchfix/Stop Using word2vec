@@ -1,0 +1,12 @@
+
+Word vectors are awesome but you don’t need a neural network – and definitely don’t need deep learning – to find them2.
+Stop using word2vec just use
+
+Pointwise Mutual Information(PMI) = log(skipgram_prob(a,b)/unigram_prob(a)unigram_prob(b))
+where skipgram_prob = probability of a,b occuring together
+	  unigram_prob  = probability of occurance of word
+
+PMI Matrix - x,y - words values are PMI
+singular value decomposition (SVD):
+	provides another way to factorize a matrix, into singular vectors and singular values.
+	Each row of one matrix represents a single word vector. 

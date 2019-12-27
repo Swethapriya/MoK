@@ -1,0 +1,75 @@
+﻿Binary Tree - Each Node can have maximum of 2 children
+A binary tree has the benefits of both an ordered array and a linked list 
+search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.
+Root − The node at the top of the tree is called root. 
+There is only one root per tree and one path from the root node to any node.
+Leaf − The node which does not have any child node is called the leaf node.
+
+Binary Search tree exhibits a special behavior. 
+A node's left child must have a value less than its parent's value and 
+the node's right child must have a value greater than its parent value.
+
+There are three ways which we use to traverse a tree −
+
+In-order Traversal   -  the left subtree is visited first, then the root and later the right sub-tree.
+Pre-order Traversal  - the root node is visited first, then the left subtree and finally the right subtree.
+Post-order Traversal - we traverse the left subtree, then the right subtree and finally the root node.
+
+If a binary tree is traversed in-order, the output will produce sorted key values in an ascending order
+
+It is observed that BST's worst-case performance is closest to linear search algorithms, that is Ο(n).
+
+AVL trees are height balancing binary search tree. 
+AVL tree checks the height of the left and the right sub-trees and assures that the difference is not more than 1. 
+This difference is called the Balance Factor.
+
+To balance itself, an AVL tree may perform the following four kinds of rotations −
+
+Left rotation   
+Right rotation
+Left-Right rotation
+Right-Left rotation
+put pics of rotations
+
+A spanning tree is a subset of Graph G, which has all the vertices covered with minimum possible number of edges.
+Hence, a spanning tree does not have cycles and it cannot be disconnected.
+
+every connected and undirected Graph G has at least one spanning tree. 
+A disconnected graph does not have any spanning tree
+
+A complete undirected graph can have maximum n^(n-2) number of spanning trees
+Adding one edge to the spanning tree will create a circuit or loop, i.e. the spanning tree is maximally acyclic.
+
+In a weighted graph, a minimum spanning tree is a spanning tree that has minimum weight than all other spanning trees 
+of the same graph.
+
+Heap is a special case of balanced binary tree data structure where
+the root-node key is compared with its children and arranged accordingly.
+
+ the value of parent is greater than that of child, this property generates Max Heap
+ Min-Heap − Where the value of the root node is less than or equal to either of its children.
+
+ insert:
+Step 1 − Create a new node at the end of heap.
+Step 2 − Assign new value to the node.
+Step 3 − Compare the value of this child node with its parent.
+Step 4 − If value of parent is less than child, then swap them.
+Step 5 − Repeat step 3 & 4 until Heap property holds.
+
+delete:
+Deletion in Max (or Min) Heap always happens at the root to remove the Maximum (or minimum) value.
+
+Step 1 − Remove root node.
+Step 2 − Move the last element of last level to root.
+Step 3 − Compare the value of this child node with its parent.
+Step 4 − If value of parent is less than child, then swap them.
+Step 5 − Repeat step 3 & 4 until Heap property holds.
+
+Heap Sort:
+max
+1. Build a  heap from the input data.
+2. At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of tree.
+3. Repeat above steps while size of heap is greater than 1.
+
+*usually array is used for heaps, by deletion we mean placing the element at the end of array, hence max heap, so as to get 
+ascending order

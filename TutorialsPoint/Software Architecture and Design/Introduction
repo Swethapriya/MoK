@@ -1,0 +1,4 @@
+Software Architecture typically refers to the bigger structures of a software system, 
+and it deals with how multiple software processes cooperate to carry out their tasks. 
+
+Software Design refers to the smaller structures and it deals with the internal design of a single software process

@@ -1,0 +1,20 @@
+The CLI communicates with InfluxDB directly by making requests to the InfluxDB API over port 8086 by default.
+
+To run influx - run influxd.exe
+run cli - influx.exe
+
+Commands:
+
+CREATE DATABASE mydb
+SHOW DATABASES
+USE mydb
+INSERT measurement,field1=serverA,field2=us_west value=0.64
+SELECT field1, fiels2, "value" FROM measurement
+
+Conceptually you can think of a measurement as an SQL table, 
+where the primary index is always time. tags and fields are effectively columns in the table. 
+tags are indexed, and fields are not. 
+The difference is that, with InfluxDB, you can have millions of measurements, 
+you don’t have to define schemas up-front, and null values aren’t stored.
+
+When no timestamp is supplied for a point, InfluxDB   the local current timestamp when the point is ingested.

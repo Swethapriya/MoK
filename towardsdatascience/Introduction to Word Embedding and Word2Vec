@@ -1,0 +1,25 @@
+word embeddings ,Loosely speaking, are vector representations of a particular word. 
+Word embedding is one of the most popular representation of document vocabulary. 
+It is capable of capturing context of a word in a document, semantic and syntactic similarity, 
+relation with other words
+
+Word2Vec is one of the most popular technique to learn word embeddings using shallow neural network.
+objective is to have words with similar context occupy close spatial positions. 
+Mathematically, the cosine of the angle between such vectors should be close to 1, i.e. angle close to 0.
+
+Word2Vec can be obtained using two methods of neural network 
+	Skip Gram 
+	Common Bag Of Words (CBOW)
+
+CBOW:
+	Here we are trying to predict a target word using a single/multi context input word. 
+	More specifically, we use the one hot encoding of the input word and measure the output error 
+	compared to one hot encoding of the target word. In the process of predicting the target word, 
+	we learn the vector representation of the target word
+
+Skip Gram:
+	This looks like multiple-context CBOW model just got flipped. To some extent that is true.
+
+Both have their own advantages and disadvantages. 
+According to Mikolov, Skip Gram works well with small amount of data and is found to represent rare words well.
+On the other hand, CBOW is faster and has better representations for more frequent words.

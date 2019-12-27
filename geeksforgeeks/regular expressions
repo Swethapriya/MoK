@@ -1,0 +1,24 @@
+* - 0 or more times
++ - 1 or more times
+{min,max}
+. - wildcard
+? - optional character
+^ - start
+$ - end
+/s : matches any whitespace characters such as space and tab
+/S : matches any non-whitespace characters
+/d : matches any digit character
+/D : matches any non-digit characters
+/w : matches any word character (basically alpha-numeric)
+/W : matches any non-word character
+/b : matches any word boundary (this would include spaces, dashes, commas, semi-colons, etc)
+[set_of_characters] – Matches any single character in set_of_characters. By default, the match is case-sensitive.
+[^set_of_characters] – Negation: Matches any single character that is not in set_of_characters.
+Grouping Characters ( )
+Vertical Bar ( | ) :
+Matches any one element separated by the vertical bar (|) character.
+\number :
+Backreference: allows a previously matched sub-expression(expression captured or enclosed within circular brackets ) 
+to be identified subsequently in the same regular expression. \n means that group enclosed within the n-th bracket
+will be repeated at current position.Example : ([a-z])\1 will match “ee” in Geek 
+Comment : (?# comment) 

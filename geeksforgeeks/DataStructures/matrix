@@ -1,0 +1,5 @@
+A matrix represents a collection of numbers arranged in an order of rows and columns. 
+It is necessary to enclose the elements of a matrix in parentheses or brackets.
+ Each element of matrix [M] can be referred to by its row and column number. For example, a23 = 6.
+
+ Start with recent article on matrixy
